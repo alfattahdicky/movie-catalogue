@@ -11,7 +11,7 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 });
 
 const FavoriteMovieIdb = {
-  async getMovie() {
+  async getMovie(id) {
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
   async getMovieAll() {
